@@ -1,0 +1,26 @@
+{
+  "name": "flavor-saver",
+  "version": "1.0.0",
+  "description": "A meal planning app from the team that brought you BET FULL STACK",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thereal-baitjet/flavor-saver.git"
+  },
+  "author": "Ashley Gonzalez, John Mancini, Christine Osmak, Juan Carlos Santos, Kelly Vaden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thereal-baitjet/flavor-saver/issues"
+  },
+  "homepage": "https://github.com/thereal-baitjet/flavor-saver#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.6.2"
+  }
+}
