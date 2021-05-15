@@ -23,7 +23,7 @@ const withAuth = require('../utils/auth');
 // });
 
 
-router.get("/", async (req,res) => {
+router.get("/weekly", async (req,res) => {
   function GetDates(startDate, daysToAdd) {
     var aryDates = [];
 
@@ -82,7 +82,14 @@ console.log(aryDates)
     }
   })
 
-  return res.render("homepage", {aryDates})
+  return res.render("weekly", {aryDates})
+})
+
+
+
+
+router.get("/", async (req,res) => {
+  return res.render("homepage")
 })
 
 
