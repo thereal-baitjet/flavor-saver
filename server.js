@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use(routes);
 
-app.get("/", async (req,res) => {
+app.get("/weekly", async (req,res) => {
   function GetDates(startDate, daysToAdd) {
     var aryDates = [];
 
@@ -90,9 +90,11 @@ console.log(aryDates)
     }
   })
 
-  return res.render("homepage", {aryDates})
+  return res.render("weekly", {aryDates})
 })
-
+app.get("/", async (req,res) => {
+  return res.render("homepage")
+})
 
 app.get("/mealplanner", async (req,res) => {
   return res.render("datepicker")
