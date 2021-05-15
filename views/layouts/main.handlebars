@@ -2,50 +2,52 @@
   <meta charset="UTF-8">
   <title>Flavor Saver</title>
 
-     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body>
   <div class="flex-column justify-space-around">
-  <nav>
-    <div class="nav-wrapper">
-      <a href="/" class="brand-logo">Flavor Saver</a>
-      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-      <ul class="right hide-on-med-and-down">
-        <!-- If the user is logged in, show a logout button -->
-    {{#if loggedIn}}
-    <li><button id="logout" class="btn-no-style">Logout</button></li>
-    {{else}}
-    <!-- Otherwise, show a link to login -->
-    <li><a href="/login">Login</a></li>
-    {{/if}}
-        <li><a href="/weekly">Weekly Calender</a></li>
-        <li><a href="/mealplanner">View all</a></li>
-        <li><a href="/">Recipes</a></li>
-        <li><a href="mobile.html"></a></li>
-            <a href="/">Home</a>
-      </ul>
-    </div>
-  </nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Flavor Saver</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <!-- If the user is logged in, show a logout button -->
+          {{#if loggedIn}}
+          <li><button id="logout" class="btn-no-style">Logout</button></li>
+          {{else}}
+          <!-- Otherwise, show a link to login -->
+          <li><a href="/login">Login</a></li>
+          {{/if}}
+          <li><a href="/weekly">Weekly Calender</a></li>
+          <li><a href="/mealplanner">View all</a></li>
+          <li><a href="/">Recipes</a></li>
+          <li><a href="mobile.html"></a></li>
+          <li><a href="/">Home</a></li>
+        </ul>
+      </div>
+    </nav>
 
-  <ul class="sidenav" id="mobile-demo">
-    <li><a href="sass.html">Sass</a></li>
-    <li><a href="badges.html">Components</a></li>
-    <li><a href="collapsible.html">Javascript</a></li>
-    <li><a href="mobile.html">Mobile</a></li>
-  </ul>
-      <main class="">
-        {{{ body }}}
-      </main>
-        <!-- If the user is logged in, load the JS script for when they logout -->
-  {{#if loggedIn}}
-  <script src="./js/logout.js"></script>
-  {{/if}}
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="sass.html">Sass</a></li>
+      <li><a href="badges.html">Components</a></li>
+      <li><a href="collapsible.html">Javascript</a></li>
+      <li><a href="mobile.html">Mobile</a></li>
+    </ul>
+    <main class="">
+      {{{ body }}}
+    </main>
+    <!-- If the user is logged in, load the JS script for when they logout -->
+    {{#if loggedIn}}
+    <script src="./js/logout.js"></script>
+    {{/if}}
   </div>
-  </body>
+</body>
+
 </html>
