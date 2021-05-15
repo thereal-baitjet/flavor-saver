@@ -8,6 +8,14 @@ const Date = require('./Date');
 // const Drink = require('./Drink');
 
 // Create all the model associations
+// User.hasMany(Recipe, {
+//     foreignKey: 'user_id',
+//     onDelete: 'CASCADE'
+//   });
+  
+//   Recipe.belongsTo(User, {
+//     foreignKey: 'user_id'
+//   });
 
 // Export all the model files
 module.exports = {

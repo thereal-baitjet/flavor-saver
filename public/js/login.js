@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // TODO:: '/' redirect the browser to the actiual app page
-      document.location.replace('/');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
@@ -37,7 +37,7 @@ const signupFormHandler = async (event) => {
     });
 // TODO signed in user todo redirect to actual app page ---- fill in with the hanlde bar page ('/')
     if (response.ok) {
-      document.location.replace('/');
+      document.location.replace('/homepage');
     } else {
       alert(response.statusText);
     }
