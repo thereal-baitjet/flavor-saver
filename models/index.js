@@ -2,6 +2,7 @@
 const User = require('./User');
 const Recipe = require('./Recipe');
 const Date = require('./Date');
+const Wine = require('./Wine');
 
 // Create all the model associations
     // Each instance of a Date belongs to one User
