@@ -4,26 +4,18 @@ const Recipe = require('./Recipe');
 const Date = require('./Date');
 const Wine = require('./Wine');
 
-// Nice-to-haves, might create these later
-// const Ingredient = require('./Ingredient');
-// const Drink = require('./Drink');
-
 // Create all the model associations
-// User.hasMany(Recipe, {
-//     foreignKey: 'user_id',
-//     onDelete: 'CASCADE'
-//   });
-  
-//   Recipe.belongsTo(User, {
-//     foreignKey: 'user_id'
-//   });
+    // Each instance of a Date belongs to one User
+
+    // One User has many Dates
+
+    // One Date has many Recipes
+
+    // One Recipe belongs to many Dates
 
 // Export all the model files
 module.exports = {
     User,
     Recipe,
-    Date,
-    Wine,
-    // Ingredient,
-    // Drink
+    Date
 }

@@ -1,9 +1,7 @@
 const fetch = require('node-fetch');
 const { Recipe } = require("../models");
 
-const recipeData = require('./recipeData.json');
-const numResults = 3; // Set # of results from Spoonacular here
-let recipes = [];
+const numResults = 100; // Set # of results from Spoonacular here
 
 // Function to get recipes from Spoonacular API
 async function getRecipes() {
@@ -21,22 +19,20 @@ async function getRecipes() {
 
     let result = await response.json();
     // Repeat this loop for every item in the API results
+    let recipes = [];
     for (i = 0; i < numResults; i++) {
         // Access the ith recipe in the API results
         let apiRecipe = result.recipes[i];
-        let modelRecipe = { id: apiRecipe.id, name: apiRecipe.title, image: apiRecipe.image };
+        let modelRecipe = { spoonacular_id: apiRecipe.id, name: apiRecipe.title, image: apiRecipe.image };
         recipes.push(modelRecipe);
     }
     return recipes;
 }
 
-// Function to use results of getRecipes() to seed Recipe table; not currently working
-// async function seedRecipes() {
-//     let recipeData = await getRecipes();
-//     Recipe.bulkCreate(recipeData);
-// };
-
-// For now, seed Recipe table from hard-coded json
-const seedRecipes = () => Recipe.bulkCreate(recipeData);
+// Function to use results of getRecipes() to seed Recipe table
+async function seedRecipes() {
+    let recipeData = await getRecipes();
+    Recipe.bulkCreate(recipeData);
+};
 
 module.exports = seedRecipes;
