@@ -2,6 +2,7 @@
 const User = require('./User');
 const Recipe = require('./Recipe');
 const Date = require('./Date');
+const Wine = require('./Wine');
 
 // Nice-to-haves, might create these later
 // const Ingredient = require('./Ingredient');
@@ -22,6 +23,7 @@ module.exports = {
     User,
     Recipe,
     Date,
+    Wine,
     // Ingredient,
     // Drink
 }
