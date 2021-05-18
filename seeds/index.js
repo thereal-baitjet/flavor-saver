@@ -2,7 +2,6 @@
 const seedUsers = require('./user-seeds');
 const seedDates = require('./date-seeds');
 const seedRecipes = require('./recipe-seeds');
-const seedWines = require('./wine-seeds');
 
 // Import sequelize connection
 const sequelize = require('../config/connection');
@@ -15,14 +14,11 @@ const seedAll = async () => {
   await seedUsers();
   console.log('\n----- USERS SEEDED -----\n');
 
-//   await seedDates();
-//   console.log('\n----- DATES SEEDED -----\n');
-
-  seedRecipes();
+  await seedRecipes();
   console.log('\n----- RECIPES SEEDED -----\n');
 
-//   await seedWines();
-//   console.log('\n----- WINES SEEDED -----\n');
+  await seedDates();
+  console.log('\n----- DATES SEEDED -----\n');
 
   // Forces Node.js program to terminate
   process.exit(0);

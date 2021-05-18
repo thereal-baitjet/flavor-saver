@@ -1,9 +1,11 @@
 const fetch = require('node-fetch');
 const { Recipe } = require("../models");
 
-const numResults = 3;
+const recipeData = require('./recipeData.json');
+const numResults = 3; // Set # of results from Spoonacular here
 let recipes = [];
 
+// Function to get recipes from Spoonacular API
 async function getRecipes() {
     // Use the "Get Random Recipe" endpoint from the Spoonacular API
     const requestURL = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?number=${numResults}`;
@@ -28,9 +30,13 @@ async function getRecipes() {
     return recipes;
 }
 
-async function seedRecipes() {
-    let recipeData = await getRecipes();
-    Recipe.bulkCreate(recipeData);
-};
+// Function to use results of getRecipes() to seed Recipe table; not currently working
+// async function seedRecipes() {
+//     let recipeData = await getRecipes();
+//     Recipe.bulkCreate(recipeData);
+// };
+
+// For now, seed Recipe table from hard-coded json
+const seedRecipes = () => Recipe.bulkCreate(recipeData);
 
 module.exports = seedRecipes;
