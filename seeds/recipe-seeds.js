@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 const { Recipe } = require("../models");
+require('dotenv').config();
 
 const numResults = 100; // Set # of results from Spoonacular here
 
@@ -12,7 +13,7 @@ async function getRecipes() {
         "method": "GET",
         "headers": {
             // TODO: Need to figure out how to hide this key
-            "x-rapidapi-key": "e311795265msh0e94ea9e73557abp1cb864jsn0a54197a68b2",
+            "x-rapidapi-key": process.env.API_KEY,
             "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com"
         }
     });
