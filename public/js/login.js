@@ -7,7 +7,7 @@ const loginFormHandler = async (event) => {
 
   if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/users/login', {
+    const response = await fetch('/users/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       // TODO:: '/' redirect the browser to the actiual app page
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
@@ -30,14 +30,14 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   if (name && email && password) {
-    const response = await fetch('/api/users', {
+    const response = await fetch('/users', {
       method: 'POST',
       body: JSON.stringify({ name, email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 // TODO signed in user todo redirect to actual app page ---- fill in with the hanlde bar page ('/')
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
