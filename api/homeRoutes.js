@@ -1,6 +1,6 @@
-const router = require('express').Router();
-const { User } = require('../models');
-const withAuth = require('../utils/auth');
+const router = require("express").Router();
+const { Date } = require("../models/Date");
+const withAuth = require("../utils/auth");
 
 // Prevent non logged in users from viewing the homepage
 // router.get('/', withAuth, async (req, res) => {
@@ -22,21 +22,28 @@ const withAuth = require('../utils/auth');
 //   }
 // });
 
-
-router.get("/weekly", async (req,res) => {
+router.get("/weekly", async (req, res) => {
   function GetDates(startDate, daysToAdd) {
     var aryDates = [];
 
     for (var i = 0; i <= daysToAdd; i++) {
-        var currentDate = new Date();
-        currentDate.setDate(startDate.getDate() + i);
-        aryDates.push(DayAsString(currentDate.getDay()) + ", " + currentDate.getDate() + " " + MonthAsString(currentDate.getMonth()) + " " + currentDate.getFullYear());
+      var currentDate = new Date();
+      currentDate.setDate(startDate.getDate() + i);
+      aryDates.push(
+        DayAsString(currentDate.getDay()) +
+          ", " +
+          currentDate.getDate() +
+          " " +
+          MonthAsString(currentDate.getMonth()) +
+          " " +
+          currentDate.getFullYear()
+      );
     }
 
     return aryDates;
-}
+  }
 
-function MonthAsString(monthIndex) {
+  function MonthAsString(monthIndex) {
     var d = new Date();
     var month = new Array();
     month[0] = "January";
@@ -53,9 +60,9 @@ function MonthAsString(monthIndex) {
     month[11] = "December";
 
     return month[monthIndex];
-}
+  }
 
-function DayAsString(dayIndex) {
+  function DayAsString(dayIndex) {
     var weekdays = new Array(7);
     weekdays[0] = "Sunday";
     weekdays[1] = "Monday";
@@ -66,45 +73,51 @@ function DayAsString(dayIndex) {
     weekdays[6] = "Saturday";
 
     return weekdays[dayIndex];
-}
+  }
 
-var startDate = new Date();
-var aryDates = GetDates(startDate, 7);
-console.log(aryDates) 
+  var startDate = new Date();
+  var aryDates = GetDates(startDate, 7);
+  console.log(aryDates);
 
-  aryDates = aryDates.map(date => {
-   return {
-      selectedDate: date,
-      breakfast: "Avocado Toast",
-      lunch: "PB&J Sando",
-      dinner: "Salmon with a salad",
-      snack: "Peanuts"
-    }
-  })
+  aryDates = aryDates.map((d) => {
+    return Date.findOne({
+      where: {
+        date: d,
+        belongsTo: req.session.user_id,
+      },
+    });
+  });
 
-  return res.render("weekly", {aryDates})
-})
+  console.log(aryDates);
 
+  // aryDates = aryDates.map(date => {
+  //  return {
+  //     selectedDate: date,
+  //     breakfast: "Avocado Toast",
+  //     lunch: "PB&J Sando",
+  //     dinner: "Salmon with a salad",
+  //     snack: "Peanuts"
+  //   }
+  // })
 
+  return res.render("weekly", { aryDates });
+});
 
+router.get("/", async (req, res) => {
+  return res.render("homepage");
+});
 
-router.get("/", async (req,res) => {
-  return res.render("homepage")
-})
-
-
-
-router.get("/mealplanner", async (req,res) => {
-  return res.render("datepicker")
-})
-router.get('/login', (req, res) => {
+router.get("/mealplanner", async (req, res) => {
+  return res.render("datepicker");
+});
+router.get("/login", (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
 
-  res.render('login');
+  res.render("login");
 });
 
 module.exports = router;
