@@ -19,17 +19,17 @@
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
           <!-- If the user is logged in, show a logout button -->
-          {{#if loggedIn}}
+          {{#if logged_in}}
           <li><button id="logout" class="btn-no-style">Logout</button></li>
-          {{else}}
-          <!-- Otherwise, show a link to login -->
-          <li><a href="/login">Login</a></li>
-          {{/if}}
           <li><a href="/weekly">Weekly Calender</a></li>
           <li><a href="/mealplanner">View all</a></li>
           <li><a href="/">Recipes</a></li>
           <li><a href="mobile.html"></a></li>
           <li><a href="/">Home</a></li>
+          {{else}}
+          <!-- Otherwise, show a link to login -->
+          <li><a href="/login">Login</a></li>
+          {{/if}}
         </ul>
       </div>
     </nav>
@@ -44,7 +44,7 @@
       {{{ body }}}
     </main>
     <!-- If the user is logged in, load the JS script for when they logout -->
-    {{#if loggedIn}}
+    {{#if logged_in}}
     <script src="./js/logout.js"></script>
     {{/if}}
   </div>
