@@ -1,5 +1,5 @@
 // Require Date from the models folder
-const { Date } = require('../models');
+const { Day } = require('../models');
 
 // Create an array of objects representing user properties
 const dateData = [
@@ -30,6 +30,6 @@ const dateData = [
 ];
 
 // Have Sequelize do a "bulk create" of Date instances based on the array of objects
-const seedDates = () => Date.bulkCreate(dateData);
+const seedDates = () => Day.bulkCreate(dateData);
 
 module.exports = seedDates;

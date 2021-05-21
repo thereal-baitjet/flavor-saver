@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Date } = require("../models/Date");
+const { Day } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Prevent non logged in users from viewing the homepage
@@ -32,9 +32,9 @@ router.get("/weekly", async (req, res) => {
       aryDates.push(
         DayAsString(currentDate.getDay()) +
           ", " +
-          currentDate.getDate() +
+          MonthAsString(currentDate.getMonth())  +
           " " +
-          MonthAsString(currentDate.getMonth()) +
+          currentDate.getDate() +  "," +
           " " +
           currentDate.getFullYear()
       );
@@ -79,20 +79,28 @@ router.get("/weekly", async (req, res) => {
   var aryDates = GetDates(startDate, 7);
   console.log(aryDates);
 
-  aryDates = aryDates.map((d) => {
-    return Date.findOne({
+  aryDates = aryDates.map( async (d) => {
+    let test = await Day.findOne({
       where: {
         date: d,
         belongsTo: req.session.user_id,
       },
-    });
+    })
+
+    return  {
+          selectedDate: d,
+           breakfast: test?.breakfast,
+  //     lunch: "PB&J Sando",
+  //     dinner: "Salmon with a salad",
+  //     snack: "Peanuts"
+    }
   });
 
   console.log(aryDates);
 
   // aryDates = aryDates.map(date => {
   //  return {
-  //     selectedDate: date,
+  //     selectedDate: date,s
   //     breakfast: "Avocado Toast",
   //     lunch: "PB&J Sando",
   //     dinner: "Salmon with a salad",

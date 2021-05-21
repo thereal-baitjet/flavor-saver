@@ -1,18 +1,18 @@
 // Require all the model files
 const User = require("./User");
 const Recipe = require("./Recipe");
-const Date = require("./Date");
+const Day = require("./Day");
 
 // Create all the model associations
 // Each instance of a Date belongs to one User
-Date.belongsTo(User, {
+Day.belongsTo(User, {
   foreignKeyConstraint: true,
   foreignKey: "belongsTo",
   onDelete: "CASCADE",
 });
 
 // One User has many Dates
-User.hasMany(Date, {
+User.hasMany(Day, {
   foreignKey: "belongsTo",
   onDelete: "CASCADE",
 });
@@ -23,5 +23,5 @@ User.hasMany(Date, {
 module.exports = {
   User,
   Recipe,
-  Date,
+  Day,
 };
