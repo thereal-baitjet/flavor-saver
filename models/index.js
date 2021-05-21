@@ -9,18 +9,15 @@ Day.belongsTo(User, {
   foreignKeyConstraint: true,
   foreignKey: "belongsTo",
   onDelete: "CASCADE",
-  constraints: false
 });
 
 // One User has many Dates
 User.hasMany(Day, {
   foreignKey: "belongsTo",
   onDelete: "CASCADE",
-  constraints: false
 });
 
-// Association between Date and Recipe
-Recipe.hasMany(Day);
+// TODO: do we need an association between Date and Recipe?
 
 // Export all the model files
 module.exports = {

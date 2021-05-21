@@ -1,10 +1,9 @@
-const { default: axios } = require("axios");
+// const { default: axios } = require("axios");
 
 var editMealBtns = document.getElementsByClassName("editBreakfast");
 for (let i = 0; i < editMealBtns.length; i++) {
   var mealBtn = editMealBtns[i];
   mealBtn.addEventListener("click", function () {
-    console.log('clicked');
     $("#mealOptions").empty();
     axios.get("/spoonacular/breakfast").then(function (response) {
       console.log(response.data.recipes);
