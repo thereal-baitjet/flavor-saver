@@ -10,11 +10,23 @@
 7. [License](#license)
 8. [Questions](#questions)
 ## Project Description
-* Meal planning to make adulting much easier! 
+* Meal planning to make adulting much easier! Allows the user to view (GET) a recipe collection and add (POST) their own
+User must be logged into view their collection and plan meals.
+
+<img width="1150" alt="Screen Shot 2021-05-20 at 11 14 33 PM" src="https://user-images.githubusercontent.com/77952267/119202662-45c30400-ba5f-11eb-8814-3adedf70613a.png">
+
+Technologies used: <br>
+Node.js <br>
+Express.js <br>
+Handlebars.js <br>
+fullPage.js - this is an open source JavaScript library that creates full-screen scrolling websites <br>
+
 ## Installation Instructions
 * npm i & Node.js
 ## Usage Information
 * The use of the application is to gather your daily meals and recipes by date. Organize your daily meals weeks ahead of time! 
+
+
 ## Contributor 
 * Kelly Vaden, Ashley Gonzalez, Juan Carlos Santos, John Mancini, and Christine Osmak. 
 ## Credits
