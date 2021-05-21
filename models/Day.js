@@ -3,9 +3,9 @@ const { Model, DataTypes } = require('sequelize');
 // Set up a variable to represent the already-configured connection
 const sequelize = require('../config/connection');
 
-class Date extends Model {}
+class Day extends Model {}
 
-Date.init(
+Day.init(
     // Set up a Date model to represent one date on the "Weekly Calendar" tab, and the users and recipes associated with it
     {
         id: {
@@ -60,8 +60,8 @@ Date.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'date'
+        modelName: 'day'
     }
 );
 
-module.exports = Date;
+module.exports = Day;
