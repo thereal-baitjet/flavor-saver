@@ -2,25 +2,25 @@ const router = require("express").Router();
 const { Day } = require("../models");
 const withAuth = require("../utils/auth");
 
-// Prevent non logged in users from viewing the homepage
-// router.get('/', withAuth, async (req, res) => {
-//   try {
-//     const userData = await User.findAll({
-//       attributes: { exclude: ['password'] },
-//       order: [['name', 'ASC']],
-//     });
+//Prevent non logged in users from viewing the homepage
+router.get('/', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['name', 'ASC']],
+    });
 
-//     const users = userData.map((project) => project.get({ plain: true }));
+const users = userData.map((user) => user.get({ plain: true }));
 
-//     res.render('homepage', {
-//       users,
-//       // Pass the logged in flag to the template
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('homepage', {
+      users,
+      // Pass the logged in flag to the template
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get("/weekly", async (req, res) => {
   function GetDates(startDate, daysToAdd) {
@@ -107,6 +107,7 @@ router.get("/weekly", async (req, res) => {
   //     snack: "Peanuts"
   //   }
   // })
+
 
   return res.render("weekly", { aryDates });
 });
