@@ -15,7 +15,7 @@ Day.init(
             autoIncrement: true
         },
         date: {
-            type: DataTypes.STRING, // Should this be a DATE?
+            type: DataTypes.STRING, 
             allowNull: false
         },
         belongsTo: {
@@ -26,32 +26,32 @@ Day.init(
             }
         },
         breakfast: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'recipe',
-              key: 'id'
-            }
+            type: DataTypes.STRING,
+            // references: {
+            //   model: 'recipe',
+            //   key: 'id'
+            // }
         },
         lunch: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'recipe',
-              key: 'id'
-            }
+            type: DataTypes.STRING,
+            // references: {
+            //   model: 'recipe',
+            //   key: 'id'
+            // }
         },
         dinner: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'recipe',
-              key: 'id'
-            }
+            type: DataTypes.STRING,
+            // references: {
+            //   model: 'recipe',
+            //   key: 'id'
+            // }
         },
         snack: {
-            type: DataTypes.INTEGER,
-            references: {
-              model: 'recipe',
-              key: 'id'
-            }
+            type: DataTypes.STRING,
+            // references: {
+            //   model: 'recipe',
+            //   key: 'id'
+            // }
         },
     },
     {

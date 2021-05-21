@@ -4,28 +4,60 @@ const { Day } = require('../models');
 // Create an array of objects representing user properties
 const dateData = [
   {
-    date: 'Saturday, May 22nd, 2021',
+    date: 'Saturday, 5/22/2021',
     belongsTo: 1,
-    breakfast: 1,
-    lunch: 2,
-    dinner: 3,
-    snack: 4
+    breakfast: "Scrambed Eggs and Bagel",
+    lunch: "Tomato and Lentil Soup",
+    dinner: "Easy Shrimp Scampi",
+    snack: "Healthy Mint Brownies"
   },
   {
-    date: 'Sunday, May 23rd, 2021',
+    date: 'Sunday, 5/23/2021',
     belongsTo: 1,
-    breakfast: 9,
-    lunch: 6,
-    dinner: 10,
-    snack: 4
+    breakfast: "Chocolate Chip Pancakes",
+    lunch: "Roasted Mediterranean Veggie Soup",
+    dinner: "Slow-Cooker Lamb Curry",
+    snack: null
   },
   {
-    date: 'Monday, May 24th, 2021',
+    date: 'Monday, 5/24/2021',
     belongsTo: 1,
-    breakfast: 1,
-    lunch: 3,
-    dinner: 7,
-    snack: 8
+    breakfast: "Avocado Toast",
+    lunch: "Corn Avocado Salsa",
+    dinner: "BBQ Style Chicken Thighs",
+    snack: "Trail Mix"
+  },
+  {
+    date: 'Tuesday, 5/25/2021',
+    belongsTo: 1,
+    breakfast: "Overnight Oats",
+    lunch: "Classic PB&J",
+    dinner: "Crab Cake Stuffed Shrimp",
+    snack: null
+  },
+  {
+    date: 'Wednesday, 5/26/2021',
+    belongsTo: 1,
+    breakfast: "Avocado Toast,",
+    lunch: "Classic French Onion Soup",
+    dinner: "Arroz con Leche",
+    snack: "Raw Cookie Dough"
+  },
+  {
+    date: 'Thursday, 5/27/2021',
+    belongsTo: 1,
+    breakfast: "Overnight Oats",
+    lunch: "Classic PB&J",
+    dinner: "Easy Chicken Tandoori",
+    snack: "The BEST Lemon Bars"
+  },
+  {
+    date: 'Friday, 5/28/2021',
+    belongsTo: 1,
+    breakfast: "Avocado Toast",
+    lunch: "Buffalo Chicken Sliders",
+    dinner: "Pizza Night",
+    snack: "Ice Cream in Waffle Cone"
   }
 ];
 

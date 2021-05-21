@@ -15,6 +15,7 @@
 
 <body>
   <div class="flex-column justify-space-around">
+  <div class=""> 
     <nav>
       <div class="nav-wrapper">
         <a href="/" class="brand-logo">Flavor Saver</a>
@@ -22,12 +23,12 @@
         <ul class="right hide-on-med-and-down">
           <!-- If the user is logged in, show a logout button -->
           {{#if logged_in}}
-          <li><button id="logout" class="btn-no-style">Logout</button></li>
-          <li><a href="/weekly">Weekly Calender</a></li>
-          <li><a href="/mealplanner">View all</a></li>
-          <li><a href="/">Recipes</a></li>
-          <li><a href="mobile.html"></a></li>
           <li><a href="/">Home</a></li>
+          <li><a href="/mealplanner">Meal Planner</a></li>
+          <li><a href="/weekly">Weekly Calender</a></li>
+          <li><a href="/">Recipes</a></li>
+          <li><a href="/logout" id="logout">Log Out</a></li>
+          <li><a href="mobile.html"></a></li>
           {{else}}
           <!-- Otherwise, show a link to login -->
           <li><a href="/login">Login</a></li>
@@ -68,10 +69,8 @@
     <!-- If the user is logged in, load the JS script for when they logout -->
 
      <script src="./js/datepicker.js"></script>
-    {{#if loggedIn}}
 
     {{#if logged_in}}
-
     <script src="./js/logout.js"></script>
     {{/if}}
   </div>
