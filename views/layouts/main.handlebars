@@ -38,10 +38,11 @@
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">Javascript</a></li>
-      <li><a href="mobile.html">Mobile</a></li>
+    <li><a href="/">Home</a></li>
+          <li><a href="/mealplanner">Meal Planner</a></li>
+          <li><a href="/weekly">Weekly Calender</a></li>
+          <li><a href="/">Recipes</a></li>
+          <li><a href="/logout" id="logout">Log Out</a></li>
     </ul>
     <main class="">
       {{{ body }}}
@@ -74,6 +75,13 @@
     <script src="./js/logout.js"></script>
     {{/if}}
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, window.options);
+  });
+  </script>
 </body>
 
 </html>
