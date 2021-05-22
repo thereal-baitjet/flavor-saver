@@ -22,9 +22,17 @@ Handlebars.js <br>
 fullPage.js - this is an open source JavaScript library that creates full-screen scrolling websites <br>
 
 ## Installation Instructions
-* npm i & Node.js
+* npm i & Node.js & MYSQL
 ## Usage Information
-* The use of the application is to gather your daily meals and recipes by date. Organize your daily meals weeks ahead of time! 
+* Make sure you have all the appropriate features installed<br>
+* Next you must run an NPM seed to import all the nessessary data in your database <br>
+* Open your terminal and run a "nodemon Server.js" to run the program locally <br> 
+
+Links to access the application: <br>
+Github repo- https://github.com/thereal-baitjet/flavor-saver.git <br>
+Github pages- https://thereal-baitjet.github.io/flavor-saver/ <br>
+Heroku page- https://flavor-saver.herokuapp.com/
+
 
 
 ## Contributor 
