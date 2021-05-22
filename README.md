@@ -38,13 +38,11 @@ Mobile version: <br>
 Featured tabs: <br>
 ![Feature 1](https://user-images.githubusercontent.com/77952267/119239760-29839d80-bb19-11eb-9b2f-566628139caa.png) <br>
 ![Feature](https://user-images.githubusercontent.com/77952267/119239765-30aaab80-bb19-11eb-85c2-3c53ba64cde6.png) <br>
-![feature2](https://user-images.githubusercontent.com/77952267/119239808-7e271880-bb19-11eb-8109-90dd3ea8abed.png) <br>
-
-
+![feature2](https://user-images.githubusercontent.com/77952267/119239869-102f2100-bb1a-11eb-9eca-65bd93e1456a.png)
 
 
 DEMO:<br>
-Video Demo-https://youtu.be/D7cRBCBvq_U
+Video Demo-https://youtu.be/D7cRBCBvq_U <br>
 PRESENTATION: <br> 
 https://docs.google.com/presentation/d/1FWA8HP-gKgyYHIFHlvwLut9NWfYxwBlvpB8hKgBBpM4/edit?usp=sharing
 
@@ -56,7 +54,7 @@ https://docs.google.com/presentation/d/1FWA8HP-gKgyYHIFHlvwLut9NWfYxwBlvpB8hKgBB
 ## Test Instructions
 * npm run seed
 ## License
-Licensed under the [MIT License](LICENSE.txt)
+Licensed under the [MIT License]
 ## Questions
 * For additional help or questions about collaboration, please reach out to ashleydelacruz999@gmail.com, christineosmak@gmail.com, ManciniJohn5988@gmail.com, BaitJet@gmail.com, or klvaden@gmail.com
 * Follow us on Github at [Amazonash](http://github.com/Amazonash), [Christineoz](http://github.com/Christineoz), [John-Mancini](http://github.com/John-Mancini), [thereal-baitjet](http://github.com/thereal-baitjet) , and  [kvaden19](http://github.com/kvaden19)
