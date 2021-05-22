@@ -33,9 +33,20 @@ Github repo- https://github.com/thereal-baitjet/flavor-saver.git <br>
 Github pages- https://thereal-baitjet.github.io/flavor-saver/ <br>
 Heroku page- https://flavor-saver.herokuapp.com/
 
+Mobile version: <br>
+<img width="468" alt="Screen Shot 2021-05-20 at 11 14 46 PM" src="https://user-images.githubusercontent.com/77952267/119239697-bd089e80-bb18-11eb-8402-5fdfe23e1936.png"> <br>
+Featured tabs: <br>
+![Feature 1](https://user-images.githubusercontent.com/77952267/119239760-29839d80-bb19-11eb-9b2f-566628139caa.png) <br>
+![Feature](https://user-images.githubusercontent.com/77952267/119239765-30aaab80-bb19-11eb-85c2-3c53ba64cde6.png) <br>
+![feature2](https://user-images.githubusercontent.com/77952267/119239808-7e271880-bb19-11eb-8109-90dd3ea8abed.png) <br>
+
+
+
 
 DEMO:<br>
 Video Demo-https://youtu.be/D7cRBCBvq_U
+PRESENTATION: <br> 
+https://docs.google.com/presentation/d/1FWA8HP-gKgyYHIFHlvwLut9NWfYxwBlvpB8hKgBBpM4/edit?usp=sharing
 
 
 ## Contributor 
