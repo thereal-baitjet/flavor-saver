@@ -4,7 +4,7 @@ const { Day } = require('../models');
 // Create an array of objects representing user properties
 const dateData = [
   {
-    date: 'Saturday, 5/22/2021',
+    date: '5/22/2021',
     belongsTo: 1,
     breakfast: "Scrambed Eggs and Bagel",
     lunch: "Tomato and Lentil Soup",
@@ -12,7 +12,7 @@ const dateData = [
     snack: "Healthy Mint Brownies"
   },
   {
-    date: 'Sunday, 5/23/2021',
+    date: '5/23/2021',
     belongsTo: 1,
     breakfast: "Chocolate Chip Pancakes",
     lunch: "Roasted Mediterranean Veggie Soup",
@@ -20,7 +20,7 @@ const dateData = [
     snack: null
   },
   {
-    date: 'Monday, 5/24/2021',
+    date: '5/24/2021',
     belongsTo: 1,
     breakfast: "Avocado Toast",
     lunch: "Corn Avocado Salsa",
@@ -28,7 +28,7 @@ const dateData = [
     snack: "Trail Mix"
   },
   {
-    date: 'Tuesday, 5/25/2021',
+    date: '5/25/2021',
     belongsTo: 1,
     breakfast: "Overnight Oats",
     lunch: "Classic PB&J",
@@ -36,7 +36,7 @@ const dateData = [
     snack: null
   },
   {
-    date: 'Wednesday, 5/26/2021',
+    date: '5/26/2021',
     belongsTo: 1,
     breakfast: "Avocado Toast,",
     lunch: "Classic French Onion Soup",
@@ -44,7 +44,7 @@ const dateData = [
     snack: "Raw Cookie Dough"
   },
   {
-    date: 'Thursday, 5/27/2021',
+    date: '5/27/2021',
     belongsTo: 1,
     breakfast: "Overnight Oats",
     lunch: "Classic PB&J",
@@ -52,7 +52,7 @@ const dateData = [
     snack: "The BEST Lemon Bars"
   },
   {
-    date: 'Friday, 5/28/2021',
+    date: '5/28/2021',
     belongsTo: 1,
     breakfast: "Avocado Toast",
     lunch: "Buffalo Chicken Sliders",
