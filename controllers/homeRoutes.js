@@ -4,7 +4,6 @@ const { belongsTo } = require("../models/User");
 const withAuth = require("../utils/auth");
 
 router.get("/", async (req, res) => {
-  console.log(req.session);
   res.render('homepage', {
     // Pass the logged in flag to the template
     logged_in: req.session.logged_in,
@@ -65,7 +64,7 @@ router.get("/weekly", withAuth, async (req, res) => {
 });
 
 router.get("/mealplanner", async (req, res) => {
-  return res.render("datepicker", {
+  return res.render("planner", {
     // Pass the logged in flag to the template
     logged_in: req.session.logged_in,
     });
