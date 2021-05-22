@@ -1,12 +1,11 @@
-const { default: axios } = require("axios");
+// const { default: axios } = require("axios");
 
 var editMealBtns = document.getElementsByClassName("editBreakfast");
 for (let i = 0; i < editMealBtns.length; i++) {
   var mealBtn = editMealBtns[i];
   mealBtn.addEventListener("click", function () {
-    console.log('clicked');
     $("#mealOptions").empty();
-    axios.get("/spoonacular/breakfast").then(function (response) {
+    axios.get("/api/spoonacular/breakfast").then(function (response) {
       console.log(response.data.recipes);
       let breakfastData = response.data.recipes;
       for (let i = 0; i < breakfastData.length; i++) {
@@ -31,7 +30,7 @@ for (let i = 0; i < editMealBtns.length; i++) {
   var mealBtn = editMealBtns[i];
   mealBtn.addEventListener("click", function () {
     $("#mealOptions").empty();
-    axios.get("/spoonacular/lunch").then(function (response) {
+    axios.get("/api/spoonacular/lunch").then(function (response) {
       console.log(response.data.recipes);
       let lunchData = response.data.recipes;
       for (let i = 0; i < lunchData.length; i++) {
@@ -56,7 +55,7 @@ for (let i = 0; i < editMealBtns.length; i++) {
   var mealBtn = editMealBtns[i];
   mealBtn.addEventListener("click", function () {
     $("#mealOptions").empty();
-    axios.get("/spoonacular/dinner").then(function (response) {
+    axios.get("/api/spoonacular/dinner").then(function (response) {
       console.log(response.data.recipes);
       let dinnerData = response.data.recipes;
       for (let i = 0; i < dinnerData.length; i++) {
@@ -81,7 +80,7 @@ for (let i = 0; i < editMealBtns.length; i++) {
   var mealBtn = editMealBtns[i];
   mealBtn.addEventListener("click", function () {
     $("#mealOptions").empty();
-    axios.get("/spoonacular/snack").then(function (response) {
+    axios.get("/api/spoonacular/snack").then(function (response) {
       console.log(response.data.recipes);
       let snackData = response.data.recipes;
       for (let i = 0; i < snackData.length; i++) {
